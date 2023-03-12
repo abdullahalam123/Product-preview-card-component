@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+  /* primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* neutral colors */
+  --dark-blue: hsl(212, 21%, 14%);
+  --dark-grey-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CARD SECTION */
+.card {
+  display: flex;
+  width: 32.875em;
+  height: 23.375em;
+  background-color: var(--white);
+  border-radius: 0.5em;
+}
+
+/* IMAGE SECTION */
+.product-image {
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  float: left;
+  height: 100%;
+}
+
+.content > h6,
+.para,
+.button {
+  font-family: "Montserrat", sans-serif;
+}
+
+.content > h1,
+.prices {
+  font-family: "Fraunces", serif;
+}
+
+.content > h1,
+.content > h6 {
+  margin: 0;
+}
+
+.content {
+  padding: 20px;
+  overflow: auto;
+}
+
+.content > h6 {
+  color: var(--dark-grey-blue);
+}
+
+.para {
+  font-size: 0.875rem;
+  color: var(--dark-grey-blue);
+}
+
+/* HEADLINE */
+.content > h1 {
+  padding-top: 0.625rem;
+}
+
+/* PRICES SECTION */
+.original-price {
+  font-size: 1.625em;
+  color: var(--dark-cyan);
+}
+
+.discounted-prices {
+  margin-left: 1em;
+  text-decoration: line-through;
+  font-size: 0.875em;
+  color: var(--dark-grey-blue);
+}
+
+/* BUTTON */
+.button {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  border: 1px solid black;
+  padding: 1em;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  cursor: pointer;
+  width: 16em;
+  border-radius: 0.6em;
+  box-shadow: 0 0 2px var(--dark-blue);
+}
+
+.button-text {
+  margin-left: -1.875em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 526px) {
+  .card {
+    display: flex;
+    width: 20.875em;
+    height: 35.375em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-image {
+    float: top;
+    width: 320px;
+    height: 200px;
+    border-radius: 0.5em;
+  }
+
+  .button {
+    width: 22em;
+  }
+}
